@@ -3,14 +3,14 @@ from tkinter import *
 
 
 class Main(Frame):
-    def __init__(self, root):
-        super(Main, self).__init__(root)
+    def __init__(root, self):
+        super(Main, root).__init__(self)
         self.build()
 
-    def build(self):
+    def build(root):
         pass
  
-    def logicalc(self, operation):
+    def logicalc(root, operation):
         pass
 
     def update():
@@ -18,11 +18,10 @@ class Main(Frame):
 
 
 if __name__ == '__main__':
-    root = Tk()
-    root["bg"] = "#000"
-    root.geometry("485x550+200+200")
-    root.title("Калькулятор")
-    root.resizable(False, False)
-    app = Main(root)
+    self = Tk()
+    self.geometry("485x550+200+200")
+   self.title("Калькулятор")
+    self.resizable(False, False)
+    app = Main(self)
     app.pack()
-    root.mainloop()
+    self.mainloop()
